@@ -1,4 +1,5 @@
 module.exports = {
+  ignorePatterns: ['node_modules/', 'dist/', '**/*.min.js', 'packages/client/server/index.js'],
   env: {
     browser: true,
     es2020: true,
@@ -17,4 +18,4 @@ module.exports = {
   rules: {
     '@typescript-eslint/ban-ts-comment': 1,
   },
-}
+};
