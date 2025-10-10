@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+if ! echo "$COMMIT_MSG" | grep -qE "^TASK-[0-9]+: .+"; then
+  echo ""
+  echo "Ошибка: Неправильный формат коммита"
+  echo "Коммит должен начинаться с TASK-номера"
+  echo "Пример: TASK-123: Обновить документацию"
+
+  exit 1
+fi
+
+exit 0

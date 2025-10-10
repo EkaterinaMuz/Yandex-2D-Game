@@ -1,0 +1,65 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "rules": {
+    "color-hex-length": "short",
+    "color-named": "never",
+    "order/order": [
+      "dollar-variables",
+      "custom-properties",
+      "declarations",
+      "rules",
+      "at-rules"
+    ],
+    "order/properties-order": [
+      "position",
+      "z-index",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "display",
+      "flex-direction",
+      "justify-content",
+      "align-items",
+      "flex-wrap",
+      "gap",
+      "width",
+      "height",
+      "margin",
+      "padding",
+      "border",
+      "background",
+      "color",
+      "font-family",
+      "font-size",
+      "font-weight",
+      "text-align",
+      "transform",
+      "transition",
+      "animation"
+    ],
+    "declaration-no-important": true,
+    "declaration-block-no-duplicate-properties": true,
+    "no-duplicate-selectors": true,
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "no-empty-source": true,
+    "property-no-deprecated": true,
+    "declaration-block-no-shorthand-property-overrides": true
+  },
+  "ignoreFiles": [
+    "build/*",
+    "dist/*",
+    "node_modules/**/*",
+    "**/*.min.css",
+    "coverage/**/*",
+    "*.config.js",
+    "*.config.ts",
+    ".eslintrc.js",
+    "lint-staged.config.js"
+  ]
+}
