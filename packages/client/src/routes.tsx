@@ -1,9 +1,5 @@
 import { AppDispatch, RootState } from './store';
 
-import { initMainPage, MainPage } from './pages/Main';
-import { initFriendsPage, FriendsPage } from './pages/FriendsPage';
-import { initNotFoundPage, NotFoundPage } from './pages/NotFound';
-
 export type PageInitContext = {
   clientToken?: string;
 };
@@ -17,17 +13,23 @@ export type PageInitArgs = {
 export const routes = [
   {
     path: '/',
-    Component: MainPage,
-    fetchData: initMainPage,
+    Component: () => <div>Main Page</div>,
+    fetchData: (props: PageInitArgs) => {
+      void props;
+    },
   },
   {
     path: '/friends',
-    Component: FriendsPage,
-    fetchData: initFriendsPage,
+    Component: () => <div>Main Page</div>,
+    fetchData: (props: PageInitArgs) => {
+      void props;
+    },
   },
   {
     path: '*',
-    Component: NotFoundPage,
-    fetchData: initNotFoundPage,
+    Component: () => <div>Main Page</div>,
+    fetchData: (props: PageInitArgs) => {
+      void props;
+    },
   },
 ];
