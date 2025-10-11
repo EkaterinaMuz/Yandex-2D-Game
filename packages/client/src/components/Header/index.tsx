@@ -13,6 +13,9 @@ export const Header = () => {
         <li>
           <Link to="/404">404</Link>
         </li>
+        <li>
+          <Link to="/game">Играть</Link>
+        </li>
       </ul>
     </nav>
   )
